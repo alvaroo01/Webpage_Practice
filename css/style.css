@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=SoDoSans&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+:root {
+    --primary-txt-clr: #272727;
+    --secondary-txt-clr: white;
+    --primary-green: #203c34;
+    --secondary-green: #00754a;
+    
+    --navbar-font-primary: SoDoSans, Helvetica Neue, Helvetica, Arial, sans-serif;
+
+
+    --textSize1: 13px;
+    --textSize2: 14px;
+    --textSize3: 16px;
+    --textSize4: 19px;
+    --textSize5: 20px;
+    --textSize6: 22px;
+    --textSize7: 24px;
+    --textSize8: 28px;
+    --textSize9: 36px;
+}
+
+body {
+    color: var(--primary-txt-clr);
+}
+
+.navbar  {
+    background-color: white;
+    border-bottom: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    color: var(--primary-txt-clr);
+    font-family: var(--navbar-font-primary);
+    font-weight: bold;
+    font-size: var(--textSize2);
+}
+
+.navbar-left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    
+}
+
+.navbar-logo svg {
+    width: 50px;
+    height: 50px;
+    margin: 15px;
+}
+
+.navbar-left-buttons ul {
+    display: flex;
+}
+
+.navbar-left-buttons li {
+    list-style: none;
+    padding: 32px 20px;
+}
+
+.navbar-left-buttons li a {
+    text-decoration: none;
+    color: var(--primary-txt-clr);  
+}
+
+.navbar-left-buttons li:nth-child(2){
+    border-bottom: 4px solid var(--secondary-green);
+}
+
+.navbar-right{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.navbar-right .find-a-store {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    font-size: var(--textSize1);
+    padding: 0px 50px;
+}
+
+.navbar-right-buttons .sign-in{
+    margin-right: 15px;
+    padding: 5px 15px;
+    border-radius: 20px;
+    border: 1px solid var(--primary-txt-clr);
+    background: none;
+    font-weight: bold;
+}
+
+.navbar-right-buttons .join-now{
+    margin-right: 40px;
+    padding: 5px 15px;
+    border-radius: 20px;
+    background: var(--primary-txt-clr);
+    color: var(--secondary-txt-clr);
+    font-weight: bold;
+}
+
+.navbar-toggle {
+    display:none;
+}
+
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+    /* Your CSS styles for extra small devices */
+
+  }
+  
+  /* Small devices (tablets, 576px and up) */
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    /* Your CSS styles for small devices */
+  }
+  
+  /* Medium devices (desktops, 768px and up) */
+  @media only screen and (max-width: 991.98px) {
+    /* Your CSS styles for medium devices */
+    .navbar-toggle {
+        display: block;
+    }
+
+    .navbar-left-buttons {
+        position:absolute;
+        top:80px;
+        left: 0px;
+        right: 0px;
+        width: 100%;
+        background-color: var(--secondary-txt-clr);
+        overflow: hidden;
+        height: 0;
+    }
+
+    .navbar-left-buttons.active {
+        height: 500px;
+    }
+
+    .navbar-left-buttons ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+  }
+
+  @media (min-width: 768px) and (max-width: 991.98px) {}
+  
+  /* Large devices (desktops, 992px and up) */
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    /* Your CSS styles for large devices */
+  }
+  
+  /* Extra large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) and (max-width: 1399.98px) {
+    /* Your CSS styles for extra large devices */
+
+  }
+  
+  /* Extra extra large devices (larger desktops, 1400px and up) */
+  @media (min-width: 1400px) {
+    /* Your CSS styles for extra extra large devices */
+  }
+  
