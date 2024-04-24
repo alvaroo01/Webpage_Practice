@@ -9,9 +9,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
 const app = () => {
     
     const navbarToggle = document.getElementById("navbar-toggle");
-    const navbarLeftButtons = document.getElementById("navbar-left-buttons");
+    const navbarItems = document.getElementById("navbar-contents");
     
     navbarToggle.addEventListener("click", (event) => {
-        navbarLeftButtons.classList.toggle("active");  
+        navbarItems.classList.toggle("active");  
     })
 }

@@ -30,11 +30,17 @@ body {
     color: var(--primary-txt-clr);
 }
 
+.navbar-logo svg {
+    width: 50px;
+    height: 50px;
+    margin: 15px;
+}
+
 .navbar  {
     background-color: white;
-    border-bottom: 2px solid black;
+
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: row;
     color: var(--primary-txt-clr);
@@ -43,46 +49,46 @@ body {
     font-size: var(--textSize2);
 }
 
-.navbar-left {
+.navbar-contents {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    
+    width: 100%;
 }
 
-.navbar-logo svg {
-    width: 50px;
-    height: 50px;
-    margin: 15px;
-}
-
-.navbar-left-buttons ul {
+.navbar-contents ul {
+    margin: 0; /* Add this line to remove the default margin */
+    padding: 0;
+    list-style-type: none;
     display: flex;
 }
 
-.navbar-left-buttons li {
+.navbar-contents li {
     list-style: none;
     padding: 32px 20px;
+    text-transform: uppercase;
+    margin-right: 15px;
 }
 
-.navbar-left-buttons li a {
+.navbar-contents li a {
     text-decoration: none;
     color: var(--primary-txt-clr);  
 }
 
-.navbar-left-buttons li:nth-child(2){
+.navbar-contents ul li:last-child {
+    margin-right: 0; 
+}
+
+.navbar-contents li:nth-child(2){
     border-bottom: 4px solid var(--secondary-green);
 }
 
-.navbar-right{
+.navbar-contents .right-side {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     flex-direction: row;
 }
 
-.navbar-right .find-a-store {
+.right-side .find-a-store {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -111,65 +117,112 @@ body {
 
 .navbar-toggle {
     display:none;
+    position: absolute;
+    top: 2rem;
+    right: 1rem;
+    background: none;
+    border: none;
+}
+
+@media only screen and (max-width: 991.98px) {
+
+.navbar-toggle {
+    display: block;
+}
+
+ul .left-side{
+    width: 100%;
+}
+
+.navbar-contents {
+    position:absolute;
+    top:80px;
+    right: 0px;
+    width: 0px;
+    background-color: var(--secondary-txt-clr);
+    overflow: hidden;
+    height: 100%;
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: flex-start; 
+}
+
+.navbar-contents.active {
+    width: 80%;
+}
+
+.navbar-contents .left-side{
+    width: 100%;
+    margin: 0px;
+}
+
+.navbar-contents .left-side ul {
+    flex-direction: column;
+}
+
+.navbar-contents .left-side ul li{
+    margin: 0px;
+    padding: 25px 0px; 
+    margin: 0px 35px; 
+    font-weight: 500;
+    font-size: var(--textSize4);
+    text-transform: none;
+}
+
+.navbar-contents .left-side ul li:nth-child(2){
+    border-bottom: none;
+}
+
+.navbar-contents .left-side ul li:last-child{
+    border-bottom: 1px solid grey;
+}
+
+.navbar-contents .right-side {
+    flex-direction: column;
+}
+
+.right-side .navbar-right-buttons {
+    order: 1; /* Change the order */
+    margin: 20px;
+    padding-top: 10px;
+}
+
+.navbar-contents .right-side {
+    align-items: start;
+}
+
+.right-side .find-a-store {
+    order: 2; /* Change the order */
+    justify-content: flex-start;
+    padding: 0px;
+    margin: 10px 20px;
+}
+
 }
 
 /* Extra small devices (phones, less than 576px) */
 @media (max-width: 575.98px) {
     /* Your CSS styles for extra small devices */
+}
 
-  }
-  
-  /* Small devices (tablets, 576px and up) */
-  @media (min-width: 576px) and (max-width: 767.98px) {
+/* Small devices (tablets, 576px and up) */
+@media (min-width: 576px) {
     /* Your CSS styles for small devices */
-  }
-  
-  /* Medium devices (desktops, 768px and up) */
-  @media only screen and (max-width: 991.98px) {
+}
+
+/* Medium devices (desktops, 768px and up) */
+@media (min-width: 768px) {
     /* Your CSS styles for medium devices */
-    .navbar-toggle {
-        display: block;
-    }
+}
 
-    .navbar-left-buttons {
-        position:absolute;
-        top:80px;
-        left: 0px;
-        right: 0px;
-        width: 100%;
-        background-color: var(--secondary-txt-clr);
-        overflow: hidden;
-        height: 0;
-    }
-
-    .navbar-left-buttons.active {
-        height: 500px;
-    }
-
-    .navbar-left-buttons ul {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-  }
-
-  @media (min-width: 768px) and (max-width: 991.98px) {}
-  
-  /* Large devices (desktops, 992px and up) */
-  @media (min-width: 992px) and (max-width: 1199.98px) {
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
     /* Your CSS styles for large devices */
-  }
-  
-  /* Extra large devices (large desktops, 1200px and up) */
-  @media (min-width: 1200px) and (max-width: 1399.98px) {
-    /* Your CSS styles for extra large devices */
+}
 
-  }
-  
-  /* Extra extra large devices (larger desktops, 1400px and up) */
-  @media (min-width: 1400px) {
-    /* Your CSS styles for extra extra large devices */
-  }
-  
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    /* Your CSS styles for extra large devices */
+}
