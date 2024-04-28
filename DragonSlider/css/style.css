@@ -146,7 +146,7 @@ a {
     flex-direction: column; 
     justify-content: center;
     align-items: flex-end;
-    
+  
 }
 
 .thumbnails .item {
@@ -157,6 +157,20 @@ a {
     transition: width 0.5s, height 0.5s;
     box-shadow:3px 3px 3px rgba(0, 0, 0, 0.322);
     margin-right: 12rem;
+    position: relative; /* Add this line */
+}
+
+.thumbnails .item:hover h3 {
+    position: absolute;
+    width: 100%;
+    bottom: 50%; /* Adjust as needed */
+    transform: translateY(50%);
+    left: 100px; /* Adjust as needed */
+    color: var(--primary-font-clr);
+    font-size: 1.2rem;
+    margin: 0; /* Reset default margin */
+    transition: opacity 0.5s ease; /* Fade transition */
+
 }
 
 .thumbnails .item:hover {
@@ -175,8 +189,9 @@ a {
 }
 
 .thumbnails .item.active img {
-    filter: brightness(1.5);
+    filter: brightness(1);
 }
+
 
 .line{
     position: absolute;
