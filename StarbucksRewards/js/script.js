@@ -56,6 +56,8 @@ const updateBox = (index, elementsArray) => {
     elementsArray[0].src = fav.img;
     elementsArray[1].textContent = fav.title;
     elementsArray[2].textContent = fav.text;
+    elementsArray.fadeIn();
+    
 }
 
 

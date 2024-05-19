@@ -120,12 +120,28 @@ a {
 .slider .list-images .item .content{
     position: absolute;
     left: 100px;
-    top: 130px;
+    top: 100vh;
+    opacity: 0;
     width: 500px;
     max-width: 80%;
     z-index: 1;
     color: var(--primary-font-clr);
+    animation-name: slideIn;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    /* animation-running js */
 }
+
+@keyframes slideIn{
+  0%{
+    top: 100vh;
+    opacity: 0;
+    }
+  100%{
+    top: 130px;
+  opacity: 1;}
+}
+
 
 .slider .list-images .item .content h2{
     font-size: 5rem;
